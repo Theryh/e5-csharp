@@ -1,0 +1,38 @@
+﻿    <Window x:Class="MegaCasting.Wpf.LoginWindow"
+            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+            xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+            xmlns:local="clr-namespace:MegaCasting.Wpf" 
+            mc:Ignorable="d"
+            Title="Login" 
+            Height="370" Width="400"
+            ResizeMode="NoResize"
+            WindowStartupLocation="CenterScreen"
+            Background="LightGray">
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="Login" Grid.Row="0" HorizontalAlignment="Center" Margin="0,20,0,0" FontSize="20"/>
+
+            <StackPanel Grid.Row="1" Margin="20">
+                <TextBlock Text="Username:" Margin="0,5"/>
+                <TextBox x:Name="UsernameTextBox" Margin="0,5" Padding="5"/>
+                <TextBlock Text="Password:" Margin="0,5"/>
+                <PasswordBox x:Name="PasswordBox" Margin="0,5" Padding="5"/>
+            </StackPanel>
+
+            <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10">
+                <Button Content="Login" Margin="10" Padding="10" Click="Login_Click"/>
+                <Button Content="Register" Margin="10" Padding="10" Click="Register_Click"/>
+            </StackPanel>
+
+            <TextBlock x:Name="ErrorMessage" Grid.Row="3" HorizontalAlignment="Center" Foreground="Red" Visibility="Collapsed" Margin="0,10"/>
+        </Grid>
+    </Window>
