@@ -1,0 +1,22 @@
+C:\Users\stefk\Desktop\Dossier entier projet qui marche - secours\MegaCasting-master\MegaCasting.Core\bin\Debug\net8.0\MegaCasting.Core.deps.json
+C:\Users\stefk\Desktop\Dossier entier projet qui marche - secours\MegaCasting-master\MegaCasting.Core\bin\Debug\net8.0\MegaCasting.Core.dll
+C:\Users\stefk\Desktop\Dossier entier projet qui marche - secours\MegaCasting-master\MegaCasting.Core\bin\Debug\net8.0\MegaCasting.Core.pdb
+C:\Users\stefk\Desktop\Dossier entier projet qui marche - secours\MegaCasting-master\MegaCasting.Core\obj\Debug\net8.0\MegaCasting.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\stefk\Desktop\Dossier entier projet qui marche - secours\MegaCasting-master\MegaCasting.Core\obj\Debug\net8.0\MegaCasting.Core.AssemblyInfoInputs.cache
+C:\Users\stefk\Desktop\Dossier entier projet qui marche - secours\MegaCasting-master\MegaCasting.Core\obj\Debug\net8.0\MegaCasting.Core.AssemblyInfo.cs
+C:\Users\stefk\Desktop\Dossier entier projet qui marche - secours\MegaCasting-master\MegaCasting.Core\obj\Debug\net8.0\MegaCasting.Core.csproj.CoreCompileInputs.cache
+C:\Users\stefk\Desktop\Dossier entier projet qui marche - secours\MegaCasting-master\MegaCasting.Core\obj\Debug\net8.0\MegaCasting.Core.dll
+C:\Users\stefk\Desktop\Dossier entier projet qui marche - secours\MegaCasting-master\MegaCasting.Core\obj\Debug\net8.0\refint\MegaCasting.Core.dll
+C:\Users\stefk\Desktop\Dossier entier projet qui marche - secours\MegaCasting-master\MegaCasting.Core\obj\Debug\net8.0\MegaCasting.Core.pdb
+C:\Users\stefk\Desktop\Dossier entier projet qui marche - secours\MegaCasting-master\MegaCasting.Core\obj\Debug\net8.0\ref\MegaCasting.Core.dll
+C:\Users\stefk\Desktop\Dossier entier projet qui marche\MegaCasting-master\MegaCasting.Core\bin\Debug\net8.0\MegaCasting.Core.deps.json
+C:\Users\stefk\Desktop\Dossier entier projet qui marche\MegaCasting-master\MegaCasting.Core\bin\Debug\net8.0\MegaCasting.Core.dll
+C:\Users\stefk\Desktop\Dossier entier projet qui marche\MegaCasting-master\MegaCasting.Core\bin\Debug\net8.0\MegaCasting.Core.pdb
+C:\Users\stefk\Desktop\Dossier entier projet qui marche\MegaCasting-master\MegaCasting.Core\obj\Debug\net8.0\MegaCasting.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\stefk\Desktop\Dossier entier projet qui marche\MegaCasting-master\MegaCasting.Core\obj\Debug\net8.0\MegaCasting.Core.AssemblyInfoInputs.cache
+C:\Users\stefk\Desktop\Dossier entier projet qui marche\MegaCasting-master\MegaCasting.Core\obj\Debug\net8.0\MegaCasting.Core.AssemblyInfo.cs
+C:\Users\stefk\Desktop\Dossier entier projet qui marche\MegaCasting-master\MegaCasting.Core\obj\Debug\net8.0\MegaCasting.Core.csproj.CoreCompileInputs.cache
+C:\Users\stefk\Desktop\Dossier entier projet qui marche\MegaCasting-master\MegaCasting.Core\obj\Debug\net8.0\MegaCasting.Core.dll
+C:\Users\stefk\Desktop\Dossier entier projet qui marche\MegaCasting-master\MegaCasting.Core\obj\Debug\net8.0\refint\MegaCasting.Core.dll
+C:\Users\stefk\Desktop\Dossier entier projet qui marche\MegaCasting-master\MegaCasting.Core\obj\Debug\net8.0\MegaCasting.Core.pdb
+C:\Users\stefk\Desktop\Dossier entier projet qui marche\MegaCasting-master\MegaCasting.Core\obj\Debug\net8.0\ref\MegaCasting.Core.dll

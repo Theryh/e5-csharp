@@ -1,19 +1,9 @@
 ﻿using MegaCasting.Core;
 using MegaCasting.DBLib.Class;
 using MegaCasting.Wpf.Core;
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using Microsoft.EntityFrameworkCore;
 using System.Windows;
-using System.Windows.Data;
-
-
-
 
 namespace MegaCasting.Wpf.ViewModel
 {
@@ -43,6 +33,18 @@ namespace MegaCasting.Wpf.ViewModel
             set { SetProperty(nameof(NewDiffuseurName), ref _NewDiffuseurName, value); }
         }
 
+        // Note de montage du nouveau diffuseur
+        private string _NewNoteDeMontage;
+
+        /// <summary>
+        /// Obtient ou définit la note de montage du nouveau diffuseur.
+        /// </summary>
+        public string NewNoteDeMontage
+        {
+            get { return _NewNoteDeMontage; }
+            set { SetProperty(nameof(NewNoteDeMontage), ref _NewNoteDeMontage, value); }
+        }
+
         // Diffuseur sélectionné
         private Diffuseur _SelectedDiffuseur;
 
@@ -66,14 +68,10 @@ namespace MegaCasting.Wpf.ViewModel
                 Diffuseurs = new ObservableCollection<Diffuseur>(mg.Diffuseurs.ToList());
             }
         }
-    
-
-
 
         /// <summary>
         /// Ajoute un diffuseur
         /// </summary>
-        /// <param name="libelle"></param>
         public void AddDiffuseur()
         {
             // Vérifie si le libellé du diffuseur est rempli
@@ -81,7 +79,14 @@ namespace MegaCasting.Wpf.ViewModel
             {
                 using (MegaCastingContext mg = new MegaCastingContext())
                 {
-                    Diffuseur newDiffuseur = new Diffuseur { LibelleDiffuseur = NewDiffuseurName };
+                    // Crée un nouveau diffuseur avec les valeurs spécifiées
+                    Diffuseur newDiffuseur = new Diffuseur
+                    {
+                        LibelleDiffuseur = NewDiffuseurName,
+                        NoteDeMontage = NewNoteDeMontage // Assigner la note de montage
+                    };
+
+                    // Ajoute le nouveau diffuseur à la base de données et à la collection
                     mg.Add(newDiffuseur);
                     mg.SaveChanges();
                     Diffuseurs.Add(newDiffuseur);
@@ -142,5 +147,4 @@ namespace MegaCasting.Wpf.ViewModel
 
         }
     }
-
 }

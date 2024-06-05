@@ -1,5 +1,4 @@
-﻿using Azure;
-using MegaCasting.Wpf.View;
+﻿using MegaCasting.Wpf.View;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -49,5 +48,19 @@ namespace MegaCasting.Wpf.View
         /// Gère le clic sur le bouton "Supprimer" pour supprimer un diffuseur.
         /// </summary>
         private void Remove_Click(object sender, RoutedEventArgs e) => ((DiffuseurViewModel)this.DataContext).RemoveDiffuseur();
+
+        private void DataGridTextColumn_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            var textBlock = sender as TextBlock;
+            if (textBlock != null && textBlock.Text.Length > 30)
+            {
+                MessageBox.Show(textBlock.Text);
+            }
+        }
+
+        private void datagrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

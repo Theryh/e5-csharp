@@ -3,11 +3,14 @@ using System.Collections.Generic;
 
 namespace MegaCasting.DBLib.Class;
 
-public partial class Diffuseur
+public class Diffuseur
 {
     public int Id { get; set; }
 
-    public string? LibelleDiffuseur { get; set; }
+    public string LibelleDiffuseur { get; set; }
 
-    public virtual ICollection<Casting> Castings { get; set; } = new List<Casting>();
+    // Assurez-vous que NoteDeMontage a un accesseur set public
+    public string NoteDeMontage { get; set; }
+
+    // Autres propriétés et méthodes
 }

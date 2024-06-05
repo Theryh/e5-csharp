@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Update="View\AccueilView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\ArtisteFormView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\DiffuseurFormView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\DiffuseurListeView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Styles\Styles.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\AccueilView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ArtisteListeView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ArtisteFormView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\DiffuseurFormView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\DiffuseurListeView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

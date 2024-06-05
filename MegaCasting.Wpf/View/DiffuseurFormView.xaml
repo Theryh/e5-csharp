@@ -22,55 +22,79 @@
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
 
-        <Label  Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5"  Content="Diffuseurs : " HorizontalAlignment="Center" FontSize="16" FontStyle="Italic"/>
+        <Label  Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2"  Content="Note de montage et de l'équipe : " HorizontalAlignment="Left" FontSize="16" FontStyle="Italic" Height="31" Margin="128,0,0,0" VerticalAlignment="Top"/>
 
-        <GroupBox Grid.Row="1" Grid.Column="1" Header="Ajout d'un diffuseur"
+        <GroupBox Grid.Row="1" Grid.Column="1" Header="Ajout d'une Note&#xD;&#xA;"
           BorderBrush="#007ACC" BorderThickness="1"
           Background="White">
-            <StackPanel Orientation="Horizontal" >
-                <Label Content="Libelle" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="31" Foreground="#007ACC"/>
-
-                <TextBox  Text="{Binding NewDiffuseurName}" 
-                  HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" 
-                  Width="120" 
-                  BorderBrush="#007ACC" BorderThickness="1"
-                  Background="White"/>
+            <StackPanel Orientation="Vertical" >
+                <Label Content="Nom équipe" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="31" Foreground="#007ACC"/>
+                <TextBox Text="{Binding NewDiffuseurName}" 
+                         HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" 
+                         Width="120" 
+                         BorderBrush="#007ACC" BorderThickness="1"
+                         Background="White"/>
+                <Label Content="Note de montage" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="31" Foreground="#007ACC"/>
+                <TextBox Text="{Binding NewNoteDeMontage}" 
+                         HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" 
+                         Width="120" 
+                         BorderBrush="#007ACC" BorderThickness="1"
+                         Background="White"/>
             </StackPanel>
         </GroupBox>
 
-        <GroupBox Grid.Row="2" Grid.Column="1" Header="Modification d'un diffuseur"
+        <GroupBox Grid.Row="2" Grid.Column="1" Header="Modification d'une Note"
           BorderBrush="#007ACC" BorderThickness="1"
           Background="White">
-            <StackPanel Orientation="Horizontal" >
-                <Label Content="Libelle" HorizontalAlignment="Left" VerticalAlignment="Top" Height="31" Foreground="#007ACC"/>
-
-                <TextBox   Text="{Binding SelectedDiffuseur.LibelleDiffuseur}" 
-                   HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" 
-                   Width="120" 
-                   BorderBrush="#007ACC" BorderThickness="1"
-                   Background="White"/>
+            <StackPanel Orientation="Vertical" >
+                <Label Content="Nom équipe" HorizontalAlignment="Left" VerticalAlignment="Top" Height="31" Foreground="#007ACC"/>
+                <TextBox Text="{Binding SelectedDiffuseur.LibelleDiffuseur}" 
+                         HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" 
+                         Width="120" 
+                         BorderBrush="#007ACC" BorderThickness="1"
+                         Background="White"/>
+                <Label Content="Note de montage" HorizontalAlignment="Left" VerticalAlignment="Top" Height="31" Foreground="#007ACC"/>
+                <TextBox Text="{Binding SelectedDiffuseur.NoteDeMontage}" 
+                         HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" 
+                         Width="120" 
+                         BorderBrush="#007ACC" BorderThickness="1"
+                         Background="White"/>
             </StackPanel>
         </GroupBox>
 
         <DataGrid 
-    Grid.Row="1" Grid.Column="2"
-    Grid.ColumnSpan="2"
-    Grid.RowSpan="2"
-    AutoGenerateColumns="False"
-    CanUserAddRows="False"
-    SelectedItem="{Binding SelectedDiffuseur}"
-    x:Name="datagrid" ItemsSource="{Binding Diffuseurs}"
-    Background="White" BorderBrush="#007ACC" BorderThickness="1"
-    SelectionMode="Single"
-    RowBackground="#E3F1FF" AlternatingRowBackground="#D1E9FF"
-    HorizontalGridLinesBrush="#D9E6F2" VerticalGridLinesBrush="#D9E6F2"
-    RowHeaderWidth="0"
-    >
+            Grid.Row="1" Grid.Column="2"
+            Grid.ColumnSpan="2"
+            Grid.RowSpan="2"
+            AutoGenerateColumns="False"
+            CanUserAddRows="False"
+            SelectedItem="{Binding SelectedDiffuseur}"
+            x:Name="datagrid" ItemsSource="{Binding Diffuseurs}"
+            Background="White" BorderBrush="#007ACC" BorderThickness="1"
+            SelectionMode="Single"
+            RowBackground="#E3F1FF" AlternatingRowBackground="#D1E9FF"
+            HorizontalGridLinesBrush="#D9E6F2" VerticalGridLinesBrush="#D9E6F2"
+            RowHeaderWidth="0" SelectionChanged="datagrid_SelectionChanged">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Libellé" Binding="{Binding LibelleDiffuseur}" IsReadOnly="True" />
+                <DataGridTextColumn Header="Note de montage" IsReadOnly="True">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="Text" Value="{Binding NoteDeMontage}" />
+                            <Setter Property="TextTrimming" Value="CharacterEllipsis" />
+                            <EventSetter Event="MouseLeftButtonUp" Handler="DataGridTextColumn_MouseLeftButtonUp" />
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                    <DataGridTextColumn.EditingElementStyle>
+                        <Style TargetType="TextBox">
+                            <Setter Property="Text" Value="{Binding NoteDeMontage}" />
+                        </Style>
+                    </DataGridTextColumn.EditingElementStyle>
+                </DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
 
+        <!-- Buttons for Insert, Update, and Delete -->
 
         <Button Grid.Row="4" Grid.Column="1" x:Name="Insert" Content="Insert" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100px" FontWeight="Bold" FontSize="14" Click="Insert_Click">
             <Button.Style>
@@ -88,12 +112,12 @@
                         <Setter.Value>
                             <ControlTemplate TargetType="Button">
                                 <Border x:Name="border"
-                            Background="{TemplateBinding Background}"
-                            BorderBrush="White"
-                            BorderThickness="2"
-                            CornerRadius="5">
+                                    Background="{TemplateBinding Background}"
+                                    BorderBrush="White"
+                                    BorderThickness="2"
+                                    CornerRadius="5">
                                     <ContentPresenter HorizontalAlignment="Center"
-                                      VerticalAlignment="Center"/>
+                                        VerticalAlignment="Center"/>
                                 </Border>
                                 <ControlTemplate.Triggers>
                                     <Trigger Property="IsMouseOver" Value="True">
@@ -123,12 +147,12 @@
                         <Setter.Value>
                             <ControlTemplate TargetType="Button">
                                 <Border x:Name="border"
-                            Background="{TemplateBinding Background}"
-                            BorderBrush="White"
-                            BorderThickness="2"
-                            CornerRadius="5">
+                                    Background="{TemplateBinding Background}"
+                                    BorderBrush="White"
+                                    BorderThickness="2"
+                                    CornerRadius="5">
                                     <ContentPresenter HorizontalAlignment="Center"
-                                      VerticalAlignment="Center"/>
+                                        VerticalAlignment="Center"/>
                                 </Border>
                                 <ControlTemplate.Triggers>
                                     <Trigger Property="IsMouseOver" Value="True">
@@ -149,8 +173,8 @@
                     <Setter Property="Background">
                         <Setter.Value>
                             <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                                <GradientStop Color="Red" Offset="0"/>
-                                <GradientStop Color="#F32F29" Offset="1"/>
+                                <GradientStop Color="#FF3D00" Offset="0"/>
+                                <GradientStop Color="#FF5E26" Offset="1"/>
                             </LinearGradientBrush>
                         </Setter.Value>
                     </Setter>
@@ -158,16 +182,16 @@
                         <Setter.Value>
                             <ControlTemplate TargetType="Button">
                                 <Border x:Name="border"
-                            Background="{TemplateBinding Background}"
-                            BorderBrush="White"
-                            BorderThickness="2"
-                            CornerRadius="5">
+                                    Background="{TemplateBinding Background}"
+                                    BorderBrush="White"
+                                    BorderThickness="2"
+                                    CornerRadius="5">
                                     <ContentPresenter HorizontalAlignment="Center"
-                                      VerticalAlignment="Center"/>
+                                        VerticalAlignment="Center"/>
                                 </Border>
                                 <ControlTemplate.Triggers>
                                     <Trigger Property="IsMouseOver" Value="True">
-                                        <Setter TargetName="border" Property="Background" Value="#F32F29"/>
+                                        <Setter TargetName="border" Property="Background" Value="#FF5E26"/>
                                     </Trigger>
                                 </ControlTemplate.Triggers>
                             </ControlTemplate>
@@ -179,4 +203,3 @@
 
     </Grid>
 </UserControl>
-

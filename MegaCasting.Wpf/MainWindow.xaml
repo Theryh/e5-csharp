@@ -38,7 +38,7 @@
 
             <!-- Boutons de navigation -->
             <StackPanel Grid.Row="1">
-                <Button Content="Ajouter Diffuseur"
+                <Button Content="Ajouter Note de Montage"
                         Foreground="White"
                         FontSize="14"
                         Height="50"
@@ -78,7 +78,7 @@
                 </Button>
 
 
-                <Button Content="Liste Artiste" 
+                <Button Content="Liste Ouvriers disponible" 
                         Foreground="White" 
                         FontSize="14" 
                         Height="50" 
@@ -123,7 +123,7 @@
                     </Button.Style>
                 </Button>
 
-                <Button Content="Ajouter Artiste" 
+                <Button Content="Ajouter Ouvriers" 
                         Foreground="Azure" 
                         FontSize="14" 
                         Height="50" 
@@ -162,82 +162,85 @@
                     </Button.Style>
                 </Button>
 
-                <Button Content="Liste Offre Casting" 
-                        Foreground="White" 
-                        FontSize="14" 
-                        Height="50" 
-                        Click="Button_Click_5">
-                    <!-- Style du bouton (similaire aux précédents) -->
-                    <Button.Style>
-                        <Style TargetType="Button">
-                            <Setter Property="Background">
-                                <Setter.Value>
-                                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                                        <GradientStop Color="#007ACC" Offset="0"/>
-                                        <GradientStop Color="#005192" Offset="1"/>
-                                    </LinearGradientBrush>
-                                </Setter.Value>
-                            </Setter>
-                            <Setter Property="Template">
-                                <Setter.Value>
-                                    <ControlTemplate TargetType="Button">
-                                        <Border x:Name="border"
+                <!--
+<Button Content="Liste Offre Casting" 
+        Foreground="White" 
+        FontSize="14" 
+        Height="50" 
+        Click="Button_Click_5">
+    <Button.Style>
+        <Style TargetType="Button">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="#007ACC" Offset="0"/>
+                        <GradientStop Color="#005192" Offset="1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border"
                                 Background="{TemplateBinding Background}"
                                 BorderBrush="White"
                                 BorderThickness="2"
                                 CornerRadius="25">
-                                            <ContentPresenter HorizontalAlignment="Center"
-                                                VerticalAlignment="Center"/>
-                                        </Border>
-                                        <ControlTemplate.Triggers>
-                                            <Trigger Property="IsMouseOver" Value="True">
-                                                <Setter TargetName="border" Property="Background" Value="#005192"/>
-                                            </Trigger>
-                                        </ControlTemplate.Triggers>
-                                    </ControlTemplate>
-                                </Setter.Value>
-                            </Setter>
-                        </Style>
-                    </Button.Style>
-                </Button>
-
-                <Button Content="Liste Contrat"
-                            Foreground="White"
-                            FontSize="14"
-                            Height="50"
-                            Click="Button_Click_6">
-                    <Button.Style>
-                        <Style TargetType="Button">
-                            <Setter Property="Background">
-                                <Setter.Value>
-                                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                                        <GradientStop Color="#007ACC" Offset="0"/>
-                                        <GradientStop Color="#005192" Offset="1"/>
-                                    </LinearGradientBrush>
-                                </Setter.Value>
-                            </Setter>
-                            <Setter Property="Template">
-                                <Setter.Value>
-                                    <ControlTemplate TargetType="Button">
-                                        <Border x:Name="border"
-                                Background="{TemplateBinding Background}"
-                                BorderBrush="White"
-                                BorderThickness="2"
-                                CornerRadius="25">
-                                            <ContentPresenter HorizontalAlignment="Center"
+                            <ContentPresenter HorizontalAlignment="Center"
                                               VerticalAlignment="Center"/>
-                                        </Border>
-                                        <ControlTemplate.Triggers>
-                                            <Trigger Property="IsMouseOver" Value="True">
-                                                <Setter TargetName="border" Property="Background" Value="#005192"/>
-                                            </Trigger>
-                                        </ControlTemplate.Triggers>
-                                    </ControlTemplate>
-                                </Setter.Value>
-                            </Setter>
-                        </Style>
-                    </Button.Style>
-                </Button>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#005192"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Button.Style>
+</Button>
+-->
+
+                <!--
+<Button Content="Liste Contrat"
+        Foreground="White"
+        FontSize="14"
+        Height="50"
+        Click="Button_Click_6">
+    <Button.Style>
+        <Style TargetType="Button">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="#007ACC" Offset="0"/>
+                        <GradientStop Color="#005192" Offset="1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border"
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="White"
+                                BorderThickness="2"
+                                CornerRadius="25">
+                            <ContentPresenter HorizontalAlignment="Center"
+                                              VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#005192"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Button.Style>
+</Button>
+-->
 
 
                 <!--<Button Content="Ajouter offre Casting"

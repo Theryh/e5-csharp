@@ -68,7 +68,6 @@ namespace MegaCasting.Wpf
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
             this.Doc.Children.Clear();
-            this.Doc.Children.Add(new OffreCastingView());
         }
 
         /// <summary>
@@ -90,7 +89,6 @@ namespace MegaCasting.Wpf
         private void Button_Click_5(object sender, RoutedEventArgs e)
         {
             this.Doc.Children.Clear();
-            this.Doc.Children.Add(new OffreCastingListe());
         }
 
         /// <summary>
@@ -113,7 +111,7 @@ namespace MegaCasting.Wpf
         {
 
             this.Doc.Children.Clear();
-            this.Doc.Children.Add(new ContratListe());
+
         }
     }
 }

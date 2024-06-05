@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using MegaCasting.DBLib.Class.Old;
 using Microsoft.EntityFrameworkCore;
 
 namespace MegaCasting.DBLib.Class;
@@ -15,11 +16,9 @@ public partial class MegaCastingContext : DbContext
     {
     }
 
-    public virtual DbSet<Adresse> Adresses { get; set; }
 
     public virtual DbSet<Artiste> Artistes { get; set; }
 
-    public virtual DbSet<Casting> Castings { get; set; }
 
     public virtual DbSet<Contrat> Contrats { get; set; }
 
@@ -34,26 +33,6 @@ public partial class MegaCastingContext : DbContext
         => optionsBuilder.UseMySQL("Server=localhost;Database=megacastingv2;user=root;password=;");
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<Adresse>(entity =>
-        {
-            entity.HasKey(e => e.Id).HasName("PK__Adresse__3213E83FD39BDA30");
-
-            entity.ToTable("Adresse");
-
-            entity.Property(e => e.Id).HasColumnName("id");
-            entity.Property(e => e.CodePostal)
-                .HasMaxLength(5)
-                .IsUnicode(false)
-                .HasColumnName("code_postal");
-            entity.Property(e => e.Rue)
-                .HasMaxLength(50)
-                .IsUnicode(false)
-                .HasColumnName("rue");
-            entity.Property(e => e.Ville)
-                .HasMaxLength(50)
-                .IsUnicode(false)
-                .HasColumnName("ville");
-        });
 
         modelBuilder.Entity<Artiste>(entity =>
         {
@@ -79,53 +58,7 @@ public partial class MegaCastingContext : DbContext
                 .HasConstraintName("FK__Artiste__metier___440B1D61");
         });
 
-        modelBuilder.Entity<Casting>(entity =>
-        {
-            entity.HasKey(e => e.Id).HasName("PK__Casting__3213E83F2519C28F");
 
-            entity.ToTable("Casting");
-
-            entity.Property(e => e.Id).HasColumnName("id");
-            entity.Property(e => e.AdresseId).HasColumnName("adresse_id");
-            entity.Property(e => e.DatePublication)
-                .HasColumnType("date")
-                .HasColumnName("date_publication");
-            entity.Property(e => e.DiffuseurId).HasColumnName("diffuseur_id");
-            entity.Property(e => e.DomaineMetier).HasColumnName("domaine_metier");
-            entity.Property(e => e.IntituleCasting)
-                .HasMaxLength(50)
-                .IsUnicode(false)
-                .HasColumnName("intitule_casting");
-            entity.Property(e => e.LibelleCasting)
-                .HasMaxLength(50)
-                .IsUnicode(false)
-                .HasColumnName("libelle_casting");
-            entity.Property(e => e.TypeCasting)
-                .HasMaxLength(50)
-                .IsUnicode(false)
-                .HasColumnName("type_casting");
-            entity.Property(e => e.TypeContrat).HasColumnName("type_contrat");
-
-            entity.HasOne(d => d.Adresse).WithMany(p => p.Castings)
-                .HasForeignKey(d => d.AdresseId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Casting__adresse__4AB81AF0");
-
-            entity.HasOne(d => d.Diffuseur).WithMany(p => p.Castings)
-                .HasForeignKey(d => d.DiffuseurId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Casting__diffuse__4BAC3F29");
-
-            entity.HasOne(d => d.DomaineMetierNavigation).WithMany(p => p.Castings)
-                .HasForeignKey(d => d.DomaineMetier)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Casting__domaine__68487DD7");
-
-            entity.HasOne(d => d.TypeContratNavigation).WithMany(p => p.Castings)
-                .HasForeignKey(d => d.TypeContrat)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Casting__type_co__693CA210");
-        });
 
         modelBuilder.Entity<Contrat>(entity =>
         {
@@ -162,6 +95,14 @@ public partial class MegaCastingContext : DbContext
                 .HasMaxLength(50)
                 .IsUnicode(false)
                 .HasColumnName("libelle_diffuseur");
+
+            // Ajout de la propriété NoteDeMontage
+
+            entity.Property(e => e.Id).HasColumnName("id");
+            entity.Property(e => e.NoteDeMontage)
+                .HasMaxLength(255) // Par exemple, définissez la longueur maximale de la note
+                .IsUnicode(false) // Assurez-vous que la colonne n'accepte que des caractères Unicode
+                .HasColumnName("note_de_montage");
         });
 
         modelBuilder.Entity<Metier>(entity =>

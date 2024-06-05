@@ -1,0 +1,28 @@
+C:\Users\stefk\Desktop\Dossier entier projet qui marche - secours\MegaCasting-master\MegaCasting.DBLib\obj\Debug\net8.0\MegaCasting.DBLib.csproj.AssemblyReference.cache
+C:\Users\stefk\Desktop\Dossier entier projet qui marche - secours\MegaCasting-master\MegaCasting.DBLib\obj\Debug\net8.0\MegaCasting.DBLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\stefk\Desktop\Dossier entier projet qui marche - secours\MegaCasting-master\MegaCasting.DBLib\obj\Debug\net8.0\MegaCasting.DBLib.AssemblyInfoInputs.cache
+C:\Users\stefk\Desktop\Dossier entier projet qui marche - secours\MegaCasting-master\MegaCasting.DBLib\obj\Debug\net8.0\MegaCasting.DBLib.AssemblyInfo.cs
+C:\Users\stefk\Desktop\Dossier entier projet qui marche - secours\MegaCasting-master\MegaCasting.DBLib\obj\Debug\net8.0\MegaCasting.DBLib.csproj.CoreCompileInputs.cache
+C:\Users\stefk\Desktop\Dossier entier projet qui marche - secours\MegaCasting-master\MegaCasting.DBLib\bin\Debug\net8.0\MegaCasting.DBLib.deps.json
+C:\Users\stefk\Desktop\Dossier entier projet qui marche - secours\MegaCasting-master\MegaCasting.DBLib\bin\Debug\net8.0\MegaCasting.DBLib.runtimeconfig.json
+C:\Users\stefk\Desktop\Dossier entier projet qui marche - secours\MegaCasting-master\MegaCasting.DBLib\bin\Debug\net8.0\MegaCasting.DBLib.dll
+C:\Users\stefk\Desktop\Dossier entier projet qui marche - secours\MegaCasting-master\MegaCasting.DBLib\bin\Debug\net8.0\MegaCasting.DBLib.pdb
+C:\Users\stefk\Desktop\Dossier entier projet qui marche - secours\MegaCasting-master\MegaCasting.DBLib\obj\Debug\net8.0\MegaCasting.DBLib.dll
+C:\Users\stefk\Desktop\Dossier entier projet qui marche - secours\MegaCasting-master\MegaCasting.DBLib\obj\Debug\net8.0\refint\MegaCasting.DBLib.dll
+C:\Users\stefk\Desktop\Dossier entier projet qui marche - secours\MegaCasting-master\MegaCasting.DBLib\obj\Debug\net8.0\MegaCasting.DBLib.pdb
+C:\Users\stefk\Desktop\Dossier entier projet qui marche - secours\MegaCasting-master\MegaCasting.DBLib\obj\Debug\net8.0\MegaCasting.DBLib.genruntimeconfig.cache
+C:\Users\stefk\Desktop\Dossier entier projet qui marche - secours\MegaCasting-master\MegaCasting.DBLib\obj\Debug\net8.0\ref\MegaCasting.DBLib.dll
+C:\Users\stefk\Desktop\Dossier entier projet qui marche\MegaCasting-master\MegaCasting.DBLib\bin\Debug\net8.0\MegaCasting.DBLib.deps.json
+C:\Users\stefk\Desktop\Dossier entier projet qui marche\MegaCasting-master\MegaCasting.DBLib\bin\Debug\net8.0\MegaCasting.DBLib.runtimeconfig.json
+C:\Users\stefk\Desktop\Dossier entier projet qui marche\MegaCasting-master\MegaCasting.DBLib\bin\Debug\net8.0\MegaCasting.DBLib.dll
+C:\Users\stefk\Desktop\Dossier entier projet qui marche\MegaCasting-master\MegaCasting.DBLib\bin\Debug\net8.0\MegaCasting.DBLib.pdb
+C:\Users\stefk\Desktop\Dossier entier projet qui marche\MegaCasting-master\MegaCasting.DBLib\obj\Debug\net8.0\MegaCasting.DBLib.csproj.AssemblyReference.cache
+C:\Users\stefk\Desktop\Dossier entier projet qui marche\MegaCasting-master\MegaCasting.DBLib\obj\Debug\net8.0\MegaCasting.DBLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\stefk\Desktop\Dossier entier projet qui marche\MegaCasting-master\MegaCasting.DBLib\obj\Debug\net8.0\MegaCasting.DBLib.AssemblyInfoInputs.cache
+C:\Users\stefk\Desktop\Dossier entier projet qui marche\MegaCasting-master\MegaCasting.DBLib\obj\Debug\net8.0\MegaCasting.DBLib.AssemblyInfo.cs
+C:\Users\stefk\Desktop\Dossier entier projet qui marche\MegaCasting-master\MegaCasting.DBLib\obj\Debug\net8.0\MegaCasting.DBLib.csproj.CoreCompileInputs.cache
+C:\Users\stefk\Desktop\Dossier entier projet qui marche\MegaCasting-master\MegaCasting.DBLib\obj\Debug\net8.0\MegaCasting.DBLib.dll
+C:\Users\stefk\Desktop\Dossier entier projet qui marche\MegaCasting-master\MegaCasting.DBLib\obj\Debug\net8.0\refint\MegaCasting.DBLib.dll
+C:\Users\stefk\Desktop\Dossier entier projet qui marche\MegaCasting-master\MegaCasting.DBLib\obj\Debug\net8.0\MegaCasting.DBLib.pdb
+C:\Users\stefk\Desktop\Dossier entier projet qui marche\MegaCasting-master\MegaCasting.DBLib\obj\Debug\net8.0\MegaCasting.DBLib.genruntimeconfig.cache
+C:\Users\stefk\Desktop\Dossier entier projet qui marche\MegaCasting-master\MegaCasting.DBLib\obj\Debug\net8.0\ref\MegaCasting.DBLib.dll

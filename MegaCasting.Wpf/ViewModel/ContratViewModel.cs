@@ -1,5 +1,6 @@
 ﻿using MegaCasting.Core;
 using MegaCasting.DBLib.Class;
+using MegaCasting.DBLib.Class.Old;
 using MegaCasting.Wpf.Core;
 using System;
 using System.Collections.Generic;

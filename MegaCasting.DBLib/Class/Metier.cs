@@ -11,5 +11,4 @@ public partial class Metier
 
     public virtual ICollection<Artiste> Artistes { get; set; } = new List<Artiste>();
 
-    public virtual ICollection<Casting> Castings { get; set; } = new List<Casting>();
 }

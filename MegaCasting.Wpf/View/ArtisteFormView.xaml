@@ -23,9 +23,9 @@
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
 
-        <Label  Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5"  Content="Artistes : " HorizontalAlignment="Center" FontSize="16" FontStyle="Italic"/>
+        <Label  Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5"  Content="Ouvriers : " HorizontalAlignment="Center" FontSize="16" FontStyle="Italic"/>
 
-        <GroupBox Grid.Row="1" Grid.Column="1" Header="Ajout d'un artiste"
+        <GroupBox Grid.Row="1" Grid.Column="1" Header="Ajout d'un ouvrier"
                   BorderBrush="#007ACC" BorderThickness="1"
                   Background="White">
             <StackPanel Orientation="Vertical">
@@ -40,12 +40,14 @@
 
                 <Label Content="Metier" HorizontalAlignment="Left" VerticalAlignment="Top" Height="23" Foreground="#007ACC"/>
                 <ComboBox ItemsSource="{Binding Metiers}" DisplayMemberPath="LibelleMetier" SelectedItem="{Binding SelectedMetier}" Width="120" BorderBrush="#007ACC" BorderThickness="1" Background="White"/>
+                
+                
             </StackPanel>
         </GroupBox>
 
 
 
-        <GroupBox Grid.Row="2" Grid.Column="1" Header="Modification d'un Artiste"
+        <GroupBox Grid.Row="2" Grid.Column="1" Header="Modification d'un Ouvrier"
                   BorderBrush="#007ACC" BorderThickness="1"
                   Background="White">
             <StackPanel Orientation="Vertical">

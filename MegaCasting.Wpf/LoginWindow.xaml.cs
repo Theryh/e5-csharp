@@ -14,7 +14,8 @@ namespace MegaCasting.Wpf
         private List<User> users = new List<User>
 {
     new User("user1@example.com", "password1"),
-    new User("user2@example.com", "password2")
+    new User("user2@example.com", "password2"),
+    new User("rapide", "rapide")
 
 };
 

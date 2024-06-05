@@ -30,8 +30,8 @@
 
             <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10">
                 <Button Content="Login" Margin="10" Padding="10" Click="Login_Click"/>
-                <Button Content="Register" Margin="10" Padding="10" Click="Register_Click"/>
-            </StackPanel>
+            <!-- <Button Content="Register" Margin="10" Padding="10" Click="Register_Click"/> -->
+        </StackPanel>
 
             <TextBlock x:Name="ErrorMessage" Grid.Row="3" HorizontalAlignment="Center" Foreground="Red" Visibility="Collapsed" Margin="0,10"/>
         </Grid>
